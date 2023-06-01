@@ -5,22 +5,31 @@ console.log('JS OK')
 const forward = document.querySelector('.fa-forward');
 const backward = document.querySelector('.fa-backward');
 
-// const imgBox = document.querySelector('.images');
+const imgBox = document.querySelector('.images');
 
 
+// Create array with images
+const sources = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
 
-// // Create array with images
-// const sources = ['./img/01.webp', './img/02.webp', './img/03.webp', './img/04.webp', './img/05.webp'];
+// Created image active variable
+let activeImage = '';
 
-// // Created image active variable
-// let activeImg = '';
+// *PHASE 2
+// Prepare html injection string
+for (let i = 0; i < sources.length; i++) {
+    activeImage += `<img src="${sources[i]}" alt="">`;
+}
 
+
+// Add HTML elements in DOM
+imgBox.innerHTML = activeImage;
 
 const images = document.querySelectorAll('img');
 
 // Create index variable
 let index = 0;
 
+// console.log(images);
 images[index].classList.add('active');
 
 
@@ -56,16 +65,6 @@ backward.addEventListener('click', function () {
 })
 
 
-
-// // *PHASE 2
-// // Prepare html injection string
-// for (let i = 0; i < sources.length; i++) {
-//     activeImg += `<img src="${sources[i]}">`;
-// }
-
-
-// // Add HTML elements in DOM
-// imgBox.innerHTML = activeImg;
 
 
 
