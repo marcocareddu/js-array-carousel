@@ -28,13 +28,30 @@ images[index].classList.add('active');
 forward.addEventListener('click', function () {
     images[index].classList.remove('active');
     index++;
+
+    // Infinite forward click
+    if (index === images.length) {
+        index = 0;
+    }
+
+    // Add class active in next card
     images[index].classList.add('active');
 })
 
-// Button backard click
+
+// Button backward click
 backward.addEventListener('click', function () {
+
+    // Remove active class
     images[index].classList.remove('active');
+
+    // Infinite backward click
+    if (index === 0) {
+        index = images.length;
+    }
     index--;
+
+    // Add class active in previous card
     images[index].classList.add('active');
 })
 
