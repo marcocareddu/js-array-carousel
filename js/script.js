@@ -10,3 +10,11 @@ const images = ['./img/01.webp', './img/02.webp', './img/03.webp', './img/04.web
 
 // Created image active variable
 let active = '';
+
+console.log(images);
+
+// Prepare html injection string
+for (let i = 0; i < images.length; i++) {
+    active += `<img src="${images[i]}" class="active"></img>`;
+}
+
