@@ -15,8 +15,11 @@
 .carousel {
     margin-top: 100px;
     height: 600px;
-    position: relative;
     display: flex;
+}
+
+.thumbnails {
+    position: relative;
 }
 
 .images {
@@ -40,18 +43,20 @@ img {
 i {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    transform: translate(0, 50%);
     color: white;
     z-index: 1;
 }
 
-.fa-forward {
-    right: 30px;
+.fa-circle-down {
+    bottom: 25px;
+    right: 50%;
+    left: 50%;
 }
 
-.fa-backward {
-    left: 30px;
+.fa-circle-up {
+    top: 25px;
+    right: 50%;
+    left: 50%;
 }
 
 .active {
