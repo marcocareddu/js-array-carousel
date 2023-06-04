@@ -43,6 +43,7 @@ i {
     top: 50%;
     transform: translate(0, 50%);
     color: white;
+    z-index: 1;
 }
 
 .fa-forward {
