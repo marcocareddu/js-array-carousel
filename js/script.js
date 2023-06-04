@@ -2,8 +2,8 @@ console.log('JS OK')
 
 // *PHASE 1
 // Link to DOM Element
-const forward = document.querySelector('.fa-forward');
-const backward = document.querySelector('.fa-backward');
+const prevDown = document.querySelector('.fa-circle-down');
+const nextUp = document.querySelector('.fa-circle-up');
 const imgBox = document.querySelector('.images');
 
 // Link to Thumbnails
@@ -36,8 +36,8 @@ let index = 0;
 images[index].classList.add('active');
 
 
-// Button forward click
-forward.addEventListener('click', function () {
+// Button prevDown click
+prevDown.addEventListener('click', function () {
     images[index].classList.remove('active');
 
 
@@ -46,7 +46,7 @@ forward.addEventListener('click', function () {
     thumbnails[index].classList.add('inactive');
     index++;
 
-    // Infinite forward click
+    // Infinite prevDown click
     if (index === images.length) {
         index = 0;
     }
@@ -59,15 +59,15 @@ forward.addEventListener('click', function () {
     thumbnails[index].classList.add('thumb-active');
 })
 
-// Button backward click
-backward.addEventListener('click', function () {
+// Button nextUp click
+nextUp.addEventListener('click', function () {
 
     // Remove active class
     images[index].classList.remove('active');
     thumbnails[index].classList.remove('thumb-active');
     thumbnails[index].classList.add('inactive');
 
-    // Infinite backward click
+    // Infinite nextUp click
     if (index === 0) {
         index = images.length;
     }
